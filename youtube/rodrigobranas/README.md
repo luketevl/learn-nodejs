@@ -90,12 +90,10 @@
 ## 6 - CORE MODULES NET
 
 ### MODULOS
-    - **Net** | Modulo para implementar o protocolo -TCP-
-    '''nodejs
-    const net = require('net');
-    ''
-
-    '
+  - **Net** | Modulo para implementar o protocolo -TCP-
+  '''nodejs
+  const net = require('net');
+  '''
 ### FUNÇÕES
   - **Cria** um _server_
   '''nodejs
