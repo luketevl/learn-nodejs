@@ -91,61 +91,62 @@
 
 ### MODULOS
   - **Net** | Modulo para implementar o protocolo -TCP-
-  '''nodejs
-  const net = require('net');
-  '''
+```nodejs
+const net = require('net');
+```
 ### FUNÇÕES
   - **Cria** um _server_
-  '''nodejs
-  net.createServer();
-  '''
+```nodejs
+net.createServer();
+```
   - **Listenner** para um _server_
-  '''nodejs
+```nodejs
   net.createServer(function(connection){
 
   });
+```
   - **Escreve** para o _client_ do _server_
-  '''nodejs
+```nodejs
   net.createServer(function(connection){
     connection.write('Hello, I am the server');
   });
 
-  '''
+```
   - **Ouve** um _server_
-  '''nodejs
+```nodejs
   net.createServer().listen(PORT);
-  '''
+```
 
   - **Cria** um _client_
-  '''nodejs
+```nodejs
   const client = net.connect([OBJECT|PORT]);
-  '''
+```
   - **Envia** dados para a camada _tcp_
-  '''nodejs
+```nodejs
   const client = net.connect([OBJECT|PORT]);
   client.write(data);
-  '''
+```
 
 ### EVENTOS
   - **DATA** | Detectar recebimento da dados vindos da _connecton_ (client or server).
-  '''nodejs
+```nodejs
   client.on('data', function(data){
    data.toString();
   });
-  '''
+```
   - **CONNECT** | Detectar quando **client** conseguiu se conectar no _server_
-  '''nodejs
+```nodejs
   client.on('connect', function(){
 
   });
-  '''
+```
 
   - **END** | Detectar evento de _fim_
-  '''nodejs
+```nodejs
   client.on('end', function(){
 
   });
-  '''
+```
 
 
 ### OBSERVACOES
