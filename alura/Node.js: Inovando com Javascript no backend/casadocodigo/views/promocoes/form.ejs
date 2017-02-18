@@ -1,0 +1,20 @@
+<!DOCTYPE>
+<html>
+  <body>
+    <form action="/promocoes" method="post">
+      <div>
+        <label for="mensagem">Mensagem</label>
+        <input type="text" name="mensagem" />
+      </div>
+      <div>
+        <label for="titulo">Titulo</label>
+        <select name="livro[id]">
+          <% for(var i = 0 ; i < lista.length; i++){%>
+                <option value="<%= lista[i].id%>"> <%= lista[i].titulo%> </option>
+          <%}%>
+        </select>
+        <input type="submit" value="Salvar" />
+      </div>
+    </form>
+  </body>
+</html>
