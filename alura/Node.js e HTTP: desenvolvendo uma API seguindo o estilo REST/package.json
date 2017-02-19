@@ -1,0 +1,16 @@
+{
+  "name": "gateway-payment",
+  "version": "1.0.0",
+  "description": "gateway payment with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lukete",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "consign": "^0.1.2",
+    "express": "^4.14.1"
+  }
+}
