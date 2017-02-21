@@ -38,8 +38,16 @@ fs.createReadStream('path').pipe(fs.createWriteStream('nameFile'));
 ```javascript
 fs.createReadStream('path').pipe(fs.createWriteStream('nameFile')).on('finish', callback);
 ```
-
-
+## OS
+- Informations about operation system
+- **INIT**
+```javascript
+const os = require('os');
+```
+- **CPU GET** | Number of _cpu_
+```javascript
+os.cpus();
+```
 
 # COMMANDS
 - **RUN FILE**
@@ -351,7 +359,16 @@ if(cluster.isMaster){
 ```javascript
 cluster.isMaster;
 ```
+- **ON**
+  - **worker** object with information about **slaves** _thread_
+```javascript
+cluster.on('event', worker => {})
+```
 
+
+#### EVENTS
+- **LISTENING** | LISTENING SERVER
+- **EXIT** | CLUSTER DEAD
 
 # OBSERVATIONS
 - **EVENT LOOP**
@@ -405,3 +422,4 @@ curl http://localhost:3000/payments/payment -X POST -v -H "Content-type: applica
     - **HIT** | finded
   - **CLUSTER**
     - **SLAVE** _doesnt_ have **FORK**
+    - **Shared** same _port_
